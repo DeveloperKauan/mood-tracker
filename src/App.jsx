@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { 
   Calendar, ChevronLeft, ChevronRight, Moon, Sun, Share2, 
-  Bell, X, BarChart3, Edit3, Save, Grid3X3, List, 
+  Bell, X, BarChart3, Edit3, Save, LayoutGrid, List, 
   Quote, Hourglass, Settings, Info
 } from 'lucide-react';
 
@@ -302,7 +302,7 @@ export default function App() {
              <button onClick={() => setCurrentYear(y => y + 1)} className="p-1 hover:text-green-600"><ChevronRight size={16} /></button>
           </div>
           <button onClick={() => setViewMode(v => v === 'year' ? 'month' : 'year')} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors">
-            {viewMode === 'year' ? <Grid3X3 size={20} /> : <List size={20} />}
+            {viewMode === 'year' ? <LayoutGrid size={20} /> : <List size={20} />}
           </button>
           <button onClick={() => setShowStats(true)} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors md:hidden">
             <BarChart3 size={20} />
